@@ -1,4 +1,12 @@
+# integration library
 cubature/
+# build dir
+build/
+# optimization library
+header_only_version/
+# eigen library
+eigen_directory/Eigen/
+
 
 # Prerequisites
 *.d
