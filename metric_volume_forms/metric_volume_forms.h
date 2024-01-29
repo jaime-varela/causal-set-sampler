@@ -15,6 +15,11 @@ namespace causalSetSampler
 
         virtual double differential_volume(const Eigen::VectorXd& coordinates) = 0;
 
+        virtual Eigen::VectorXd differential_volume_derivative(const Eigen::VectorXd& coordinates) {
+            Eigen::VectorXd emptyVector; // Create an empty VectorXd
+            return emptyVector;
+        };
+
     };
     
     metric_volume_forms::metric_volume_forms(/* args */)
