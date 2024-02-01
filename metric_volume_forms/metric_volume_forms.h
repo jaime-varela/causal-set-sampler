@@ -9,6 +9,7 @@ namespace causalSetSampler
     private:
         /* data */
         int dimension;
+        bool is_jacobian_defined = false;
     public:
         metric_volume_forms(/* args */);
         ~metric_volume_forms();
