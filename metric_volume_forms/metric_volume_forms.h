@@ -6,7 +6,7 @@ namespace causalSetSampler
 {
     class metric_volume_forms
     {
-    private:
+    protected:
         /* data */
         int dimension;
         bool is_jacobian_defined = false;
@@ -20,6 +20,19 @@ namespace causalSetSampler
             Eigen::VectorXd emptyVector; // Create an empty VectorXd
             return emptyVector;
         };
+
+        double optimization_function(const Eigen::VectorXd& x, Eigen::VectorXd* grad_out, void* opt_data)
+        {
+            //FIXME figure out if this is right
+            double u;
+            if (grad_out && this->is_jacobian_defined) {
+                *grad_out = this->differential_volume_derivative(x);
+            } else {
+                u = this->differential_volume(x);
+            }
+
+            return u;
+    }
 
     };
     

@@ -14,6 +14,10 @@ include_directories(${CMAKE_SOURCE_DIR}/header_only_version)
 # Add the C library subdirectory
 add_subdirectory(cubature)
 
+# Add the metric form library
+add_subdirectory(metric_volume_forms)
+
+
 # Add the executable
 add_executable(cubature_test cubature_test.cpp)
 
@@ -21,5 +25,9 @@ add_executable(cubature_test cubature_test.cpp)
 target_link_libraries(cubature_test PRIVATE cubature)
 
 
-# optimlib
+# optimlib integration
 add_executable(optim_lib_test optim_lib_test.cpp)
+
+
+# schwarchild optimization
+add_executable(optimization_of_volume_sampling optimization_of_volume_sampling.cpp)
