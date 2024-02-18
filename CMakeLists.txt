@@ -31,3 +31,4 @@ add_executable(optim_lib_test optim_lib_test.cpp)
 
 # schwarchild optimization
 add_executable(optimization_of_volume_sampling optimization_of_volume_sampling.cpp)
+target_link_libraries(optimization_of_volume_sampling PRIVATE metric_volume_forms)
