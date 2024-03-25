@@ -40,3 +40,6 @@ eigen_directory/Eigen/
 *.exe
 *.out
 *.app
+
+# vscode
+.vscode
